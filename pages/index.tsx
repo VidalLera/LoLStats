@@ -1,9 +1,20 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 
+const options : RequestInit = {
+  headers: {
+    "X-Riot-Token": "RGAPI-4b819912-644c-4e7d-8425-e037ae437f31"
+  }
+}
+
+
+
+
 const Home: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <Head>
