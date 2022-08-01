@@ -1,3 +1,3 @@
 export const token = {
-  "X-Riot-Token": "RGAPI-192f19b6-8d99-4d4e-9380-6133ee600bb0"
+  "X-Riot-Token": "RGAPI-b9cf86d2-a571-4cd3-a41e-76cafa27487c"
 }

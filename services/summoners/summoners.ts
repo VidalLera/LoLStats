@@ -1,8 +1,8 @@
-import { token } from "services/token";
+import { fetchGet } from "services/general"
+import { summoner, matchIds, match } from "services/Routes"
 
-export const getSummonerByName = (summonerName: string) => {
-  const options : RequestInit = { headers: token }
-  const URL = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}`
-  console.log(options)
-  return fetch(URL, options).then(res => res.json());
-}
+export const getSummoner = (summonerName: string) => fetchGet(summoner(summonerName))
+
+export const getMatchIds = (puuid: string) => fetchGet(matchIds(puuid))
+
+export const getMatch = (matchId: string) => fetchGet(match(matchId))
