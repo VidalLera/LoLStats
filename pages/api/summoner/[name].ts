@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { Summoner } from 'model/summoner'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getMatchIds, getSummoner, getMatch } from 'services/summoners/summoners'
 
@@ -8,27 +9,22 @@ type Data = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<String[]>
+  res: NextApiResponse<Summoner>
 ) {
+  const { name } = req.query
   console.time('summoner')
-  getSummoner('SlenderLynux')
+  getSummoner(name)
     .then(summoner => {
       console.log(`[...getSummoner]`)
-      return getMatchIds(summoner.puuid)
+      res.status(200).json(summoner)
     })
-    .then(matchIds => {
-      console.log(`[...getMatchesIds]`)
-      return getAllMatchs(matchIds)
+    .catch(err => {
+      res.status(500).json(err)
     })
-    .then(matches => {
-      console.timeEnd('summoner')
-      res.status(200).json(matches)
-    })
-  .catch(err => {
-    res.status(500).json(err)
-  })
+    .finally(() => console.timeEnd('summoner'))
 }
 
 const getAllMatchs = (matchIds: string[]) => {
-  return Promise.all(matchIds.map(getMatch)) // change to Promise.allSettled()
+  // return Promise.all(matchIds.map(getMatch)) // change to Promise.allSettled()
+  return getMatch(matchIds[0])
 }

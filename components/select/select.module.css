@@ -1,0 +1,13 @@
+.select {
+  border: none;
+  background-color: #181a20;
+  border-radius: none;
+  height: 40px;
+  width: 75px;
+  appearance: none;
+}
+
+.optionClass {
+  border-radius: none;
+  top: 10px
+}

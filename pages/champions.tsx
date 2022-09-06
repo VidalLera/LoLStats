@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Champion from "./champions/[championId]";
 
@@ -15,7 +16,9 @@ const Champions = ({champions}: props) => {
               <Link href={`champions/${championId}`}>
                 <div>
                 <h1>{champion.id}</h1>
-                <img 
+                <Image 
+                  width={100}
+                  height={100}
                   src={`https://ddragon.leagueoflegends.com/cdn/12.14.1/img/champion/${champion.id}.png`} 
                   alt={`${champion.id}_logo`} 
                   />
