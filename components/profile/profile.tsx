@@ -2,20 +2,10 @@ import { Summoner } from "model/Summoner";
 import Image from "next/image";
 import { useState, useMemo } from "react";
 
-
-const itemsPos = [
-  "item0",
-  "item1",
-  "item2",
-  "item3",
-  "item4",
-  "item5",
-  "item6"
-]
-
 type props = {
   summoner: Summoner
 }
+
 export const Profile = ({ summoner }: props) => {
   return (
     <div className={''}>

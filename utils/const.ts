@@ -25,3 +25,13 @@ export const REGIONS = {
   TR: "EUROPE",
   OCE: "SEA"
 }
+
+export const itemsPositions = [
+  "item0",
+  "item1",
+  "item2",
+  "item3",
+  "item4",
+  "item5",
+  "item6"
+]

@@ -1,6 +1,6 @@
 import Select from "components/select/select"
 import { useRouter } from "next/router"
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 import { PLATFORM } from "utils/const"
 
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
     setSummoner(e.target.value)
   }
 
-  const regionChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const regionChange = (e:  ChangeEvent<HTMLSelectElement>) => {
     setRegion(e.target.value)
   }
 

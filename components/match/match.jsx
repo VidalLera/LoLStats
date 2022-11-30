@@ -1,17 +1,7 @@
 import Image from "next/image";
 import { useState, useMemo } from "react";
+import { itemsPositions } from "utils/const";
 import { container, img } from "./match.module.css"
-
-
-const itemsPos = [
-  "item0",
-  "item1",
-  "item2",
-  "item3",
-  "item4",
-  "item5",
-  "item6"
-]
 
 export const Match = ({ match }) => {
 
@@ -37,7 +27,7 @@ export const Match = ({ match }) => {
         Items
         <div>
           {
-            itemsPos.map(itemPos => <ItemImage key={itemPos} itemId={match[itemPos]}/>)
+            itemsPositions.map(itemPos => <ItemImage key={itemPos} itemId={match[itemPos]}/>)
           }
         </div>
       </div>
