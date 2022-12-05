@@ -6,13 +6,13 @@ const nextConfig = {
     domains: ['ddragon.leagueoflegends.com']
   },
   experimental: {
-    appDir: true,
+    appDir: true
   },
   i18n: {
-    locales: ["en"],
+    locales: ['en'],
     defaultLocale: 'en',
     localeDetection: true
-  },
+  }
 }
 
 module.exports = nextConfig
