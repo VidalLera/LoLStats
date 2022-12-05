@@ -3,5 +3,8 @@
     "standard",
     "next/core-web-vitals",
     "next"
-  ]
+  ],
+  "rules": {
+    "no-console": "warn"
+  }
 }

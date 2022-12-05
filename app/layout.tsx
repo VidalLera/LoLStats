@@ -1,4 +1,3 @@
-import { Header } from 'components/header/header'
 import { ReactNode } from 'react'
 import Head from './head'
 

@@ -26,7 +26,8 @@ export const REGIONS = {
   OCE: 'SEA'
 }
 
-export const ITEMS_POSITIONS = new Array(6).fill('').map((_item, i) => 'item' + (i + 1))
+export const items = new Array(6).fill('').map((_item, i) => 'item' + (i + 1))
+export const ITEMS_POSITIONS = ['item0', 'item1', 'item2', 'item3', 'item4', 'item5', 'item6'] as const
 
 export const LANGUAGES = [
   'en_US',

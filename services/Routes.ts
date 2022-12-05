@@ -31,5 +31,5 @@ const ICON_IMG = `${IMG}/profileicon`
 export const ALL_CHAMPIONS = `${CHAMPION}.json`
 export const champion = (name: string) => `${CHAMPION}/${name}.json`
 export const championImg = (name: string) => `${CHAMPION_IMG}/${name}.png`
-export const itemImg = (itemId: string) => `${ITEM_IMG}/${itemId}.png`
+export const itemImg = (itemId: number) => `${ITEM_IMG}/${itemId}.png`
 export const profileIcon = (iconId: number) => `${ICON_IMG}/${iconId}.png`
