@@ -1,6 +1,6 @@
 import { Summoner } from "model/Summoner";
 import Image from "next/image";
-import { useState, useMemo } from "react";
+import { profileIcon } from "services/routes";
 
 type props = {
   summoner: Summoner
@@ -11,7 +11,7 @@ export const Profile = ({ summoner }: props) => {
     <div className={''}>
       <h2>{summoner.name}</h2>
       <Image
-        src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/profileicon/${summoner.profileIconId}.png`} 
+        src={profileIcon(summoner.profileIconId)} 
         alt={summoner.name} 
         width={100}  
         height={100}

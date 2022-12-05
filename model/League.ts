@@ -1,16 +1,15 @@
 export interface League {
-  freshBlood:   boolean;
-  hotStreak:    boolean;
-  inactive:     boolean;
-  leagueId:     string;
+  freshBlood: boolean;
+  hotStreak: boolean;
+  inactive: boolean;
+  leagueId: string;
   leaguePoints: number;
-  losses:       number;
-  queueType:    string;
-  rank:         string;
-  summonerId:   string;
+  losses: number;
+  queueType: string;
+  rank: string;
+  summonerId: string;
   summonerName: string;
-  tier:         string;
-  veteran:      boolean;
-  wins:         number;
+  tier: string;
+  veteran: boolean;
+  wins: number;
  }
- 

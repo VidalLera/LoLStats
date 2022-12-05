@@ -1,9 +1,10 @@
-const BASE_URL = "https://euw1.api.riotgames.com/lol"
-const URL = "https://europe.api.riotgames.com/lol"
+const BASE_URL = 'https://euw1.api.riotgames.com/lol'
+const URL = 'https://europe.api.riotgames.com/lol'
 const MATCH_V5 = `${URL}/match/v5/matches`
 const SUMMONER_V5 = `${BASE_URL}/summoner/v4/summoners`
 const LEAGUE_V4 = `${URL}/league/v4`
 const SPECTATOR_V4 = `${BASE_URL}/spectator/v4`
+
 export const ACTIVE_GAMES = `${SPECTATOR_V4}/featured-games`
 
 export const summoner = (summonerName: string) => `${SUMMONER_V5}/by-name/${summonerName}`
@@ -17,3 +18,18 @@ export const grandMasterLeagues = (queue: string) => `${LEAGUE_V4}/grandmasterle
 // can be paged
 export const league = (queue: string, division: string, tier: string) => `${LEAGUE_V4}/entries/${queue}/${division}/${tier}?page=1`
 export const activeGame = (encryptedSummonerId: string) => `${SPECTATOR_V4}/active-games/by-summoner/${encryptedSummonerId}`
+
+const STATIC_PATH = 'https://ddragon.leagueoflegends.com/cdn'
+const SEASON = `${STATIC_PATH}/12.22.1`
+const DATA = `${SEASON}/data`
+const IMG = `${SEASON}/img`
+const LANGUAGE = `${DATA}/en_US`
+const CHAMPION = `${LANGUAGE}/champion`
+const CHAMPION_IMG = `${IMG}/champion`
+const ITEM_IMG = `${IMG}/item`
+const ICON_IMG = `${IMG}/profileicon`
+export const ALL_CHAMPIONS = `${CHAMPION}.json`
+export const champion = (name: string) => `${CHAMPION}/${name}.json`
+export const championImg = (name: string) => `${CHAMPION_IMG}/${name}.png`
+export const itemImg = (itemId: string) => `${ITEM_IMG}/${itemId}.png`
+export const profileIcon = (iconId: number) => `${ICON_IMG}/${iconId}.png`

@@ -1,21 +1,24 @@
+import { Participant } from "model/Match";
 import Image from "next/image";
-import { useState, useMemo } from "react";
-import { itemsPositions } from "utils/const";
-import { container, img } from "./match.module.css"
+import { championImg, itemImg } from "services/routes";
+import { ITEMS_POSITIONS } from "utils/const";
 
-export const Match = ({ match }) => {
+type props = {
+  match: Participant
+}
+
+export const Match = ({ match }: props) => {
 
   const KDA = match && match.kills + match.assists / match.deaths
 
   if (!match) return <>Loading ...</>
   return (
-    <div className={container}>
+    <div>
       <Image
         height={100}
         width={100} 
-        src={`https://ddragon.leagueoflegends.com/cdn/12.14.1/img/champion/${match.championName}.png`} 
+        src={championImg(match.championName)} 
         alt={match.championName} 
-        className={img} 
       />
       KDA {match.kills}/{match.deaths}/{match.assists}
       <br />
@@ -27,19 +30,19 @@ export const Match = ({ match }) => {
         Items
         <div>
           {
-            itemsPositions.map(itemPos => <ItemImage key={itemPos} itemId={match[itemPos]}/>)
+            // ITEMS_POSITIONS.map(itemPos => <ItemImage key={itemPos} itemId={match[itemPos]}/>)
           }
         </div>
       </div>
     </div>
   )
 }
-const ItemImage = ({ itemId }) => {
+const ItemImage = ({ itemId }: { itemId: string }) => {
   return (
     <Image
       height={30}
       width={30}
-      src={`https://ddragon.leagueoflegends.com/cdn/12.14.1/img/item/${itemId}.png`}
+      src={itemImg(itemId)}
       alt={'Item' + itemId}
     />
   )

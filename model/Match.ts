@@ -150,8 +150,8 @@ export interface Style {
 }
 
 export enum Description {
-  PrimaryStyle = "primaryStyle",
-  SubStyle = "subStyle",
+  PrimaryStyle = 'primaryStyle',
+  SubStyle = 'subStyle',
 }
 
 export interface Selection {
@@ -174,15 +174,15 @@ export interface Ban {
 }
 
 export interface Objectives {
-  baron: Baron;
-  champion: Baron;
-  dragon: Baron;
-  inhibitor: Baron;
-  riftHerald: Baron;
-  tower: Baron;
+  baron: Objective;
+  champion: Objective;
+  dragon: Objective;
+  inhibitor: Objective;
+  riftHerald: Objective;
+  tower: Objective;
 }
 
-export interface Baron {
+export interface Objective {
   first: boolean;
   kills: number;
 }
