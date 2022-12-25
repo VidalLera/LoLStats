@@ -19,10 +19,12 @@ export const grandMasterLeagues = (queue: string) => `${LEAGUE_V4}/grandmasterle
 export const league = (queue: string, division: string, tier: string) => `${LEAGUE_V4}/entries/${queue}/${division}/${tier}?page=1`
 export const activeGame = (encryptedSummonerId: string) => `${SPECTATOR_V4}/active-games/by-summoner/${encryptedSummonerId}`
 
-const STATIC_PATH = 'https://ddragon.leagueoflegends.com/cdn'
-const SEASON = `${STATIC_PATH}/12.22.1`
-const DATA = `${SEASON}/data`
-const IMG = `${SEASON}/img`
+const STATIC_PATH = 'https://ddragon.leagueoflegends.com'
+export const VERSIONS = `${STATIC_PATH}/api/versions.json`
+const CDN = `${STATIC_PATH}/cdn`
+const VERSION = `${CDN}/12.22.1`
+const DATA = `${VERSION}/data`
+const IMG = `${VERSION}/img`
 const LANGUAGE = `${DATA}/en_US`
 const CHAMPION = `${LANGUAGE}/champion`
 const CHAMPION_IMG = `${IMG}/champion`

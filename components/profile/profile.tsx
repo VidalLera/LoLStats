@@ -17,6 +17,7 @@ export const Profile = ({ summoner }: props) => {
         height={100}
       />
       <h3>{summoner.summonerLevel}</h3>
+      <div>{new Date(summoner.revisionDate).toLocaleDateString()}</div>
     </div>
   )
 }

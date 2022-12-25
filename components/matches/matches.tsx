@@ -14,7 +14,7 @@ export async function Matches ({ puuid }: props) {
       <div>Matches</div>
       {
         /* @ts-expect-error */
-        matchIds.map(matchId => <Match key={matchId} matchId={matchId} />)
+        matchIds.map(matchId => <Match key={matchId} puuid={puuid} matchId={matchId} />)
       }
     </>
   )

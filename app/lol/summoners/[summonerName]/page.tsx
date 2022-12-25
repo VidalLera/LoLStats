@@ -1,5 +1,6 @@
 import { Matches } from 'components/matches/matches'
 import { getSummoner } from 'services/summoners/summoners'
+import { Profile } from 'components/profile/profile'
 
 type props = {
   params: {
@@ -8,11 +9,12 @@ type props = {
 }
 
 export default async function Page ({ params: { summonerName } }: props) {
-  const { puuid } = await getSummoner(summonerName)
+  const summoner = await getSummoner(summonerName)
 
+  const { puuid } = summoner
   return (
     <>
-      <div>SummonerId: {summonerName}</div>
+      <Profile summoner={summoner} />
       {/* @ts-expect-error */}
       <Matches puuid={puuid}/>
     </>
