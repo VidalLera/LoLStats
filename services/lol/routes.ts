@@ -16,22 +16,5 @@ export const challengerLeagues = (queue: string) => `${LEAGUE_V4}/challengerleag
 export const masterLeagues = (queue: string) => `${LEAGUE_V4}/masterleagues/by-queue/${queue}`
 export const grandMasterLeagues = (queue: string) => `${LEAGUE_V4}/grandmasterleagues/by-queue/${queue}`
 // can be paged
-export const league = (queue: string, division: string, tier: string) => `${LEAGUE_V4}/entries/${queue}/${division}/${tier}?page=1`
+export const league = (queue: string, division: string, tier: string) => `${LEAGUE_V4}/entries/${queue}/${division}/${tier}`
 export const activeGame = (encryptedSummonerId: string) => `${SPECTATOR_V4}/active-games/by-summoner/${encryptedSummonerId}`
-
-const STATIC_PATH = 'https://ddragon.leagueoflegends.com'
-export const VERSIONS = `${STATIC_PATH}/api/versions.json`
-const CDN = `${STATIC_PATH}/cdn`
-const VERSION = `${CDN}/12.22.1`
-const DATA = `${VERSION}/data`
-const IMG = `${VERSION}/img`
-const LANGUAGE = `${DATA}/en_US`
-const CHAMPION = `${LANGUAGE}/champion`
-const CHAMPION_IMG = `${IMG}/champion`
-const ITEM_IMG = `${IMG}/item`
-const ICON_IMG = `${IMG}/profileicon`
-export const ALL_CHAMPIONS = `${CHAMPION}.json`
-export const champion = (name: string) => `${CHAMPION}/${name}.json`
-export const championImg = (name: string) => `${CHAMPION_IMG}/${name}.png`
-export const itemImg = (itemId: number) => `${ITEM_IMG}/${itemId}.png`
-export const profileIcon = (iconId: number) => `${ICON_IMG}/${iconId}.png`

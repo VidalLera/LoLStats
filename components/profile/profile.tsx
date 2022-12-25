@@ -1,6 +1,6 @@
 import { Summoner } from 'model/Summoner'
 import Image from 'next/image'
-import { profileIcon } from 'services/routes'
+import { profileIcon } from 'services/lol/ddragon'
 
 type props = {
   summoner: Summoner

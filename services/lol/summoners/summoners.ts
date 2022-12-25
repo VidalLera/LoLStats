@@ -1,5 +1,5 @@
 import { fetchGet } from 'services/general'
-import { summoner, summonerLeague } from 'services/routes'
+import { summoner, summonerLeague } from 'services/lol/routes'
 import { Summoner } from 'model/Summoner'
 import { League } from 'model/League'
 

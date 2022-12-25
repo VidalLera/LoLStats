@@ -10,7 +10,6 @@ export const fetchGet = <T>(url: string, params?: any): Promise<T> => {
 const res = (res: Response) => {
   if (res.ok) return res.json()
   const err = new Error()
-  err.status = res.status
   err.message = res.statusText
   throw err
 }

@@ -1,6 +1,6 @@
 import { MatchInfo } from 'model/Match'
 import { fetchGet } from 'services/general'
-import { match, matchIds } from 'services/routes'
+import { match, matchIds } from 'services/lol/routes'
 
 export const getMatchIds = (puuid: string) => fetchGet<string[]>(matchIds(puuid))
 

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { championImg } from 'services/routes'
-import { getChampions } from 'services/static/champions'
+import { championImg } from 'services/lol/ddragon'
+import { getChampions } from 'services/lol/static/champions'
 
 export default async function Page () {
   const champions = await getChampions()

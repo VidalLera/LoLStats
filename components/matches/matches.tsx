@@ -1,6 +1,5 @@
 import { Match } from 'components/match/match'
-import React from 'react'
-import { getMatchIds } from 'services/match/match'
+import { getMatchIds } from 'services/lol/match/match'
 
 type props = {
   puuid: string

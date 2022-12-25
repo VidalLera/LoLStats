@@ -1,7 +1,7 @@
 import { Champion, ChampionMetaData } from 'model/Champion'
 import { ChampionsMetaData } from 'model/Champions'
 import { fetchGet } from 'services/general'
-import { ALL_CHAMPIONS, champion } from 'services/routes'
+import { ALL_CHAMPIONS, champion } from 'services/lol/ddragon'
 
 export const getChampions = async (): Promise<Champion[]> => {
   const { data } = await fetchGet<ChampionsMetaData>(ALL_CHAMPIONS)

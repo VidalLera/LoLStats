@@ -1,5 +1,5 @@
 import { Matches } from 'components/matches/matches'
-import { getSummoner } from 'services/summoners/summoners'
+import { getSummoner } from 'services/lol/summoners/summoners'
 import { Profile } from 'components/profile/profile'
 
 type props = {

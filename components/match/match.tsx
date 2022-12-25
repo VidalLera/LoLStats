@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { getUserMatch } from 'services/match/match'
-import { championImg, itemImg } from 'services/routes'
+import { getUserMatch } from 'services/lol/match/match'
+import { championImg, itemImg } from 'services/lol/ddragon'
 import { ITEMS_POSITIONS } from 'utils/constants'
 
 // type ItemPositions = Extract<keyof Participant, string>;

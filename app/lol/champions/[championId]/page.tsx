@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { championImg } from 'services/routes'
-import { getChampion } from 'services/static/champions'
+import { championImg } from 'services/lol/ddragon'
+import { getChampion } from 'services/lol/static/champions'
 
 type props = {
   params: {
